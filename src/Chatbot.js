@@ -35,8 +35,11 @@ const Chatbot = () => {
 
   return (
     <View style={styles.container}>
-    <View style={{marginVertical: 30,marginHorizontal:20}}>
+      <View style={{marginTop: '10%',backgroundColor:'#D8F0F1',borderRadius: 5}}> 
+     
       <Text style={styles.header}>Chatbot with {user.name.first}</Text>
+      </View>
+      <View style={styles.divider}/>
       
       <ScrollView style={styles.chatContainer}>
         {messages.map((msg, index) => (
@@ -58,7 +61,6 @@ const Chatbot = () => {
         </>
       )}
       </View>
-    </View>
   );
 };
 
@@ -70,7 +72,9 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 22,
     fontWeight: 'bold',
-    marginBottom: 10,
+    textAlign:'center',
+    color: '#146',
+    marginVertical: 5
   },
   chatContainer: {
     flex: 1,
@@ -85,7 +89,7 @@ const styles = StyleSheet.create({
   },
   botMessage: {
     alignSelf: 'flex-start',
-    backgroundColor: '#e5e5ea',
+    backgroundColor: '#008000',
     padding: 10,
     borderRadius: 10,
     marginVertical: 5,
@@ -101,6 +105,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingLeft: 10,
   },
+  divider:{
+    borderWidth: 0.5,
+    marginVertical:5,
+    width: '120%',
+    right: '10%',
+  }
 });
 
 export default Chatbot;
